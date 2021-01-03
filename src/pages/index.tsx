@@ -10,8 +10,7 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
-        <div>
+      <div className="container" dangerouslySetInnerHTML={{ __html: `<div>
           <h1>
             Hi, We're Next.js & Netlify<span className="fancy">.</span>
           </h1>
@@ -56,7 +55,10 @@ export default function Index() {
             font-size: 2.25rem;
           }
         }
-      `}</style>
+                                                           `}</style>` }}></div>
+  
+
+        
     </Layout>
   );
 }
